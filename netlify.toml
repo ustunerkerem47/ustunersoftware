@@ -16,3 +16,13 @@
   from = "/indir/defteria"
   to = "https://defteria.netlify.app/Defteria.apk"
   status = 302
+
+[[redirects]]
+  from = "/huma"
+  to = "/#/huma"
+  status = 301
+
+[[redirects]]
+  from = "/defteria"
+  to = "/#/defteria"
+  status = 301
