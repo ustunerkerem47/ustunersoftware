@@ -1,0 +1,31 @@
+name: Cloudflare
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - '.github/workflows/cloudflare.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Yayınla
+        run: |
+          [ -n "$CLOUDFLARE_API_TOKEN" ] || { echo "::error::CLOUDFLARE_API_TOKEN yok"; exit 1; }
+          npx -y wrangler@4.158.0 pages project list | grep -q "ustunersoftware" || \
+            npx -y wrangler@4.158.0 pages project create ustunersoftware --production-branch main
+          npx -y wrangler@4.158.0 pages deploy public --project-name ustunersoftware --branch main --commit-dirty=true
+      - name: Kontrol
+        run: |
+          npx -y wrangler@4.158.0 pages project list | grep -o "[a-z0-9-]*\.pages\.dev" | sort -u
+          sleep 15
+          URL=https://ustunersoftware.pages.dev
+          for p in / /indir/huma /indir/defteria; do echo "$p $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' $URL$p)"; done
+          curl -s $URL/ | grep -o 'assets/index-[^"]*\.js' | head -1 | xargs -I{} curl -s $URL/{} | grep -c "ustunersoftware@gmail.com"
