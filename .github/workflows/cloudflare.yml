@@ -26,6 +26,6 @@ jobs:
         run: |
           npx -y wrangler@4.158.0 pages project list | grep -o "[a-z0-9-]*\.pages\.dev" | sort -u
           sleep 15
-          URL=https://ustunersoftware.pages.dev
+          URL=https://ustunersoftware.com.tr
           for p in / /indir/huma /indir/defteria; do echo "$p $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' $URL$p)"; done
           curl -s $URL/ | grep -o 'assets/index-[^"]*\.js' | head -1 | xargs -I{} curl -s $URL/{} | grep -c "ustunersoftware@gmail.com"
