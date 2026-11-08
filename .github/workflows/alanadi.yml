@@ -1,0 +1,21 @@
+name: Alan adları
+on: workflow_dispatch
+jobs:
+  domains:
+    runs-on: ubuntu-latest
+    env:
+      T: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      A: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - run: |
+          api() { curl -s -H "Authorization: Bearer $T" -H "content-type: application/json" "$@"; }
+          for pair in ustunersoftware:ustunersoftware.com.tr ustunersoftware:www.ustunersoftware.com.tr humaapp:huma.ustunersoftware.com.tr defteria:defteria.ustunersoftware.com.tr; do
+            p=${pair%%:*}; d=${pair##*:}
+            r=$(api -X POST "https://api.cloudflare.com/client/v4/accounts/$A/pages/projects/$p/domains" -d "{\"name\":\"$d\"}")
+            echo "$d ekle: $(echo "$r" | jq -c '{success, errors: [.errors[]?.message], status: .result.status}')"
+          done
+          sleep 20
+          for p in ustunersoftware humaapp defteria; do
+            api "https://api.cloudflare.com/client/v4/accounts/$A/pages/projects/$p/domains" | jq -c '.result[]? | {name, status, err: .verification_data.error_message, v: .validation_data.status}'
+          done
+          api "https://api.cloudflare.com/client/v4/zones?name=ustunersoftware.com.tr" | jq -c '{success, errors: [.errors[]?.message], zones: [.result[]? | {id, status}]}'
