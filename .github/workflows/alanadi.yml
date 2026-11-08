@@ -14,8 +14,15 @@ jobs:
             r=$(api -X POST "https://api.cloudflare.com/client/v4/accounts/$A/pages/projects/$p/domains" -d "{\"name\":\"$d\"}")
             echo "$d ekle: $(echo "$r" | jq -c '{success, errors: [.errors[]?.message], status: .result.status}')"
           done
-          sleep 20
-          for p in ustunersoftware humaapp defteria; do
-            api "https://api.cloudflare.com/client/v4/accounts/$A/pages/projects/$p/domains" | jq -c '.result[]? | {name, status, err: .verification_data.error_message, v: .validation_data.status}'
+          for i in $(seq 1 30); do
+            out=$(for p in ustunersoftware humaapp defteria; do
+              api "https://api.cloudflare.com/client/v4/accounts/$A/pages/projects/$p/domains" | jq -c '.result[]? | {name, status, err: .verification_data.error_message, v: .validation_data.status}'
+            done)
+            echo "$out" | grep -q '"status":"pending"\|"status":"initializing"' || break
+            sleep 20
+          done
+          echo "$out"
+          for d in ustunersoftware.com.tr www.ustunersoftware.com.tr huma.ustunersoftware.com.tr defteria.ustunersoftware.com.tr; do
+            echo "ADRES $d $(curl -s -o /dev/null -w '%{http_code}' -m 20 https://$d/)"
           done
           api "https://api.cloudflare.com/client/v4/zones?name=ustunersoftware.com.tr" | jq -c '{success, errors: [.errors[]?.message], zones: [.result[]? | {id, status}]}'
