@@ -71,7 +71,7 @@ for (const pg of pages) {
     .replace(/<meta name="description"[^>]*>\s*/s, '')
     .replace('</head>', `    ${head}\n  </head>`)
     .replace('<div id="root"></div>', `<div id="root">${inner}</div>`)
-  const out = pg.path === '/' ? join(root, 'index.html') : join(root, pg.path.slice(1), 'index.html')
+  const out = pg.path === '/' ? join(root, 'index.html') : join(root, pg.path.slice(1) + '.html')
   await mkdir(join(out, '..'), { recursive: true })
   await writeFile(out, html)
   console.log('hazır', pg.path, inner.length)
