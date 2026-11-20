@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ustunersoftware.com.tr/sitemap.xml
