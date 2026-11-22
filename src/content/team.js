@@ -26,7 +26,7 @@ export const departments = [
     ['Doruk Ersavaş', 'DevOps mühendisi', 'DevOps engineer'],
     ['Okan Telli', 'Sunucu ve ağ uzmanı', 'Server and network specialist'],
     ['Hakan Sarı', 'Veritabanı uzmanı', 'Database specialist'],
-    ['Alina Sokolova', 'Siber güvenlik uzmanı', 'Cybersecurity specialist'],
+    ['Vera Lazutkina', 'Siber güvenlik uzmanı', 'Cybersecurity specialist'],
   ] },
   { tr: 'Veri', en: 'Data', members: [
     ['Efe Tunalı', 'Veri mühendisi', 'Data engineer'],
