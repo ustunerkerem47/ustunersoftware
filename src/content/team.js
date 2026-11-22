@@ -1,0 +1,50 @@
+export const departments = [
+  { tr: 'Yönetim', en: 'Leadership', members: [
+    ['Lukas Brenner', 'CTO / yazılım mimarı', 'CTO / software architect'],
+    ['Tolga Demirsoy', 'Mühendislik müdürü', 'Engineering manager'],
+    ['Onur Kalkan', 'Proje yöneticisi / Scrum master', 'Project manager / Scrum master'],
+    ['Ece Durmaz', 'Operasyon koordinatörü', 'Operations coordinator'],
+    ['Sevim Ertunç', 'Görev ve ekip takibi', 'Task and team tracking'],
+    ['Deniz Karabey', 'Strateji ve karar destek', 'Strategy and decision support'],
+  ] },
+  { tr: 'Ürün ve tasarım', en: 'Product and design', members: [
+    ['Zeynep Arıkan', 'HÜMA ürün yöneticisi', 'HÜMA product manager'],
+    ['Emre Sezer', 'Defteria ürün yöneticisi', 'Defteria product manager'],
+    ['Kaan Özbilgin', 'BAĞLAM ürün yöneticisi', 'BAĞLAM product manager'],
+    ['İlkim Sarıgöl', 'Kullanıcı araştırmacısı', 'User researcher'],
+    ['Nil Ertan', 'Arayüz (UI/UX) tasarım asistanı', 'UI/UX design assistant'],
+  ] },
+  { tr: 'Yazılım', en: 'Software', members: [
+    ['Mert Ilgaz', 'Mobil geliştirici (Flutter / Android)', 'Mobile developer (Flutter / Android)'],
+    ['Elif Karataş', 'Frontend / web geliştirici', 'Frontend / web developer'],
+    ['Barkın Tezel', 'Backend geliştirici', 'Backend developer'],
+    ['Alp Sönmezer', 'Masaüstü uygulama geliştirici', 'Desktop app developer'],
+    ['Rohan Iyengar', 'Yapay zekâ / ML mühendisi', 'AI / ML engineer'],
+    ['Ezgi Karadayı', 'Test ve kalite (QA) mühendisi', 'Test and quality (QA) engineer'],
+  ] },
+  { tr: 'Altyapı ve güvenlik', en: 'Infrastructure and security', members: [
+    ['Doruk Ersavaş', 'DevOps mühendisi', 'DevOps engineer'],
+    ['Okan Telli', 'Sunucu ve ağ uzmanı', 'Server and network specialist'],
+    ['Hakan Sarı', 'Veritabanı uzmanı', 'Database specialist'],
+    ['Milena Draganova', 'Siber güvenlik uzmanı', 'Cybersecurity specialist'],
+  ] },
+  { tr: 'Veri', en: 'Data', members: [
+    ['Efe Tunalı', 'Veri mühendisi', 'Data engineer'],
+    ['Kübra Demir', 'Veri analisti', 'Data analyst'],
+    ['Ayça Körpe', 'Pazar ve rakip analisti', 'Market and competitor analyst'],
+  ] },
+  { tr: 'Büyüme ve içerik', en: 'Growth and content', members: [
+    ['Ceren Yamaner', 'ASO / SEO uzmanı', 'ASO / SEO specialist'],
+    ['Melis Çakır', 'İçerik yazarı', 'Content writer'],
+    ['Arda Koç', 'Görsel ve video içerik uzmanı', 'Visual and video content specialist'],
+    ['Chloe Laurent', 'Teknik yazar', 'Technical writer'],
+    ['Yiğit Karan', 'Topluluk yöneticisi', 'Community manager'],
+  ] },
+  { tr: 'Destek ve iş', en: 'Support and business', members: [
+    ['Pelin Ateş', 'Müşteri destek uzmanı', 'Customer support specialist'],
+    ['Duru Esen', 'Moderasyon ön filtresi', 'Moderation pre-filter'],
+    ['Felix Ambrosch', 'İş geliştirme (yurt dışı)', 'Business development (international)'],
+    ['Gökçe Yavuzer', 'Finans ve bütçe analisti', 'Finance and budget analyst'],
+    ['Nazlı Önder', 'Kamu ve ihale dokümanları uzmanı', 'Public sector and tender documents specialist'],
+  ] },
+]

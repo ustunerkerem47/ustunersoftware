@@ -7,9 +7,10 @@ import { Status } from '../components/Bits.jsx'
 import { Mark } from '../components/Logo.jsx'
 import { useLang } from '../i18n.jsx'
 import { site, joinMail } from '../content/site.js'
+import { departments } from '../content/team.js'
 
 export default function Home() {
-  const { t } = useLang()
+  const { t, lang } = useLang()
   const h = t.home
   return (
     <>
@@ -127,16 +128,24 @@ export default function Home() {
                 <p>{h.team.founder.text}</p>
               </div>
             </Reveal>
-            <div className="org-lines" aria-hidden="true"><i /></div>
-            <div className="org-row">
-              {h.team.roles.map((r, i) => (
-                <Reveal key={r.title} delay={0.06 * i} className="org-node open">
-                  <span className="org-open">{t.common.openRole}</span>
-                  <b>{r.title}</b>
-                  <p>{r.text}</p>
+            <div className="org-stem" aria-hidden="true" />
+            <div className="org-depts">
+              {departments.map((d, i) => (
+                <Reveal key={d.tr} delay={0.04 * (i % 4)} className="dept">
+                  <h4>{d[lang]}</h4>
+                  <ul>
+                    {d.members.map(([name, tr, en]) => (
+                      <li key={name}>
+                        <span className="m-av">{name.split(' ').map((w) => w[0]).join('').slice(0, 2)}</span>
+                        <span className="m-txt"><b>{name}</b><small>{lang === 'tr' ? tr : en}</small></span>
+                        <span className="ai-badge" title={h.team.aiTitle}>{h.team.ai}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </Reveal>
               ))}
             </div>
+            <p className="org-legend"><span className="ai-badge">{h.team.ai}</span>{h.team.legend}</p>
           </div>
           <Reveal className="center-head">
             <a className="btn primary" href={joinMail(h.team.mailSubject)}>{h.team.cta}</a>

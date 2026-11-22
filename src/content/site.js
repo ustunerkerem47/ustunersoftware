@@ -89,7 +89,10 @@ const tr = {
     team: {
       eyebrow: 'Ekip',
       title: 'Ekip şeması',
-      lead: 'Üstüner Software büyüyor. Aşağıdaki açık rollerden birinde bizimle çalışmak isterseniz bize yazın.',
+      lead: 'Kurucumuz ve onunla birlikte çalışan yapay zekâ ekibi. Ekibe katılmak isterseniz bize yazın.',
+      ai: 'YZ',
+      aiTitle: 'Yapay zekâ ajanı',
+      legend: 'YZ etiketli ekip üyeleri yapay zekâ ajanlarıdır.',
       founder: { name: 'Kerem Üstüner', role: 'Kurucu · Genel Koordinatör', text: 'Ürün, yazılım ve tasarım' },
       roles: [
         { title: 'Yazılım', text: 'Uygulama ve sunucu geliştirme' },
@@ -288,7 +291,10 @@ const en = {
     team: {
       eyebrow: 'Team',
       title: 'Team chart',
-      lead: 'Üstüner Software is growing. If you would like to work with us in one of the open roles below, write to us.',
+      lead: 'Our founder and the AI team working with him. If you would like to join the team, write to us.',
+      ai: 'AI',
+      aiTitle: 'AI agent',
+      legend: 'Team members with the AI label are AI agents.',
       founder: { name: 'Kerem Üstüner', role: 'Founder · General Coordinator', text: 'Product, software and design' },
       roles: [
         { title: 'Software', text: 'App and server development' },

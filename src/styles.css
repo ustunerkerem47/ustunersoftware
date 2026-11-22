@@ -191,7 +191,7 @@ button { font: inherit; color: inherit; }
 
 /* Team */
 .team { padding: 120px 0; background: var(--black); }
-.org { margin: 72px auto 64px; max-width: 980px; }
+.org { margin: 72px auto 64px; max-width: 1060px; }
 .org-top { display: flex; justify-content: center; }
 .org-node { border: 1px solid var(--line2); border-radius: 20px; padding: 22px; background: var(--ink); text-align: center; display: flex; flex-direction: column; align-items: center; }
 .org-node b { font-size: 17px; letter-spacing: -0.01em; }
@@ -208,6 +208,19 @@ button { font: inherit; color: inherit; }
 .org-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .org-node.open { border-style: dashed; background: transparent; }
 .org-open { font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); border: 1px solid var(--line2); border-radius: 99px; padding: 3px 9px; margin-bottom: 12px; }
+.org-stem { width: 1px; height: 48px; margin: 0 auto; background: linear-gradient(var(--line2), rgba(201, 176, 122, 0.5)); }
+.org-depts { columns: 3 260px; column-gap: 14px; padding-top: 14px; border-top: 1px solid var(--line2); }
+.dept { break-inside: avoid; margin-bottom: 14px; border: 1px solid var(--line); border-radius: 20px; padding: 20px 18px 10px; background: var(--ink); text-align: left; }
+.dept h4 { margin: 0 0 10px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.dept ul { list-style: none; margin: 0; padding: 0; }
+.dept li { display: flex; align-items: center; gap: 11px; padding: 9px 0; border-top: 1px solid var(--line); }
+.dept li:first-child { border-top: 0; }
+.m-av { width: 34px; height: 34px; flex: none; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 600; background: #22252b; color: #d6d5d1; }
+.m-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.3; }
+.m-txt b { font-size: 14.5px; font-weight: 600; }
+.m-txt small { font-size: 12.5px; color: var(--muted); }
+.ai-badge { flex: none; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold); border: 1px solid rgba(201, 176, 122, 0.5); border-radius: 6px; padding: 2px 6px; cursor: help; }
+.org-legend { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--muted); font-size: 14px; margin: 22px 0 0; }
 .mail-link { margin-top: 16px; color: var(--muted); font-size: 14px; }
 
 /* Contact */
