@@ -1,17 +1,17 @@
 export const departments = [
   { tr: 'Yönetim', en: 'Leadership', members: [
-    ['Lukas Brenner', 'CTO / yazılım mimarı', 'CTO / software architect'],
-    ['Tolga Demirsoy', 'Mühendislik müdürü', 'Engineering manager'],
+    ['Açık Pozisyon', 'CTO / yazılım mimarı', 'CTO / software architect'],
+    ['Açık Pozisyon', 'Mühendislik müdürü', 'Engineering manager'],
     ['Onur Kalkan', 'Proje yöneticisi / Scrum master', 'Project manager / Scrum master'],
     ['Ece Durmaz', 'Operasyon koordinatörü', 'Operations coordinator'],
     ['Sevim Ertunç', 'Görev ve ekip takibi', 'Task and team tracking'],
-    ['Deniz Karabey', 'Strateji ve karar destek', 'Strategy and decision support'],
+    ['Açık Pozisyon', 'Strateji ve karar destek', 'Strategy and decision support'],
   ] },
   { tr: 'Ürün ve tasarım', en: 'Product and design', members: [
     ['Zeynep Arıkan', 'HÜMA ürün yöneticisi', 'HÜMA product manager'],
     ['Emre Sezer', 'Defteria ürün yöneticisi', 'Defteria product manager'],
     ['Kaan Özbilgin', 'BAĞLAM ürün yöneticisi', 'BAĞLAM product manager'],
-    ['İlkim Sarıgöl', 'Kullanıcı araştırmacısı', 'User researcher'],
+    ['Açık Pozisyon', 'Kullanıcı araştırmacısı', 'User researcher'],
     ['Nil Ertan', 'Arayüz (UI/UX) tasarım asistanı', 'UI/UX design assistant'],
   ] },
   { tr: 'Yazılım', en: 'Software', members: [
@@ -44,7 +44,7 @@ export const departments = [
     ['Pelin Ateş', 'Müşteri destek uzmanı', 'Customer support specialist'],
     ['Duru Esen', 'Moderasyon ön filtresi', 'Moderation pre-filter'],
     ['Felix Ambrosch', 'İş geliştirme (yurt dışı)', 'Business development (international)'],
-    ['Gökçe Yavuzer', 'Finans ve bütçe analisti', 'Finance and budget analyst'],
+    ['Açık Pozisyon', 'Finans ve bütçe analisti', 'Finance and budget analyst'],
     ['Nazlı Önder', 'Kamu ve ihale dokümanları uzmanı', 'Public sector and tender documents specialist'],
   ] },
 ]
