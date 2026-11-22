@@ -80,7 +80,7 @@ const tr = {
       eyebrow: 'Hakkımızda',
       title: 'Küçük bir ekip.',
       title2: 'Uzun bir yol.',
-      text: 'Üstüner Software, Kerem Üstüner’in kurduğu ve kendi ekibiyle uygulamalar geliştirdiği bir yazılım girişimi. Fikirden tasarıma, koddan yayına kadar her adımı kendimiz atıyoruz. Ankara’da başladık; insanların her gün gerçekten kullandığı uygulamalar yapmak istiyoruz.',
+      text: 'Üstüner Software, Kerem Üstüner’in kurduğu ve kendi ekibiyle uygulamalar geliştirdiği bir yazılım girişimi. Fikirden tasarıma, koddan yayına kadar her adımı kendimiz atıyoruz. Ankara’da başladık; Tüm Dünyadaki insanların her gün gerçekten kullandığı uygulamalar yapmak istiyoruz.',
       values: [
         {
           title: 'Sadelik',
@@ -99,7 +99,7 @@ const tr = {
     team: {
       eyebrow: 'Ekip',
       title: 'Ekip şeması',
-      lead: 'Kurucumuz ve birlikte çalışan ekibimiz. Ekibe katılmak isterseniz bize yazın.',
+      lead: 'Kurucumuz ve birlikte çalışan ekibimiz. Ekibe katılmak isterseniz bize ulaşın.',
       founder: {
         name: 'Kerem Üstüner',
         role: 'Kurucu · Genel Koordinatör · CEO',
@@ -111,7 +111,7 @@ const tr = {
         { title: 'Sosyal medya ve büyüme', text: 'Tanıtım ve topluluk' },
         { title: 'Moderasyon', text: 'HÜMA topluluğunun güvenliği' },
       ],
-      cta: 'Ekip büyüyor, katılın',
+      cta: 'Ekibimiz büyüyor, siz de katılın',
       mailSubject: 'Üstüner Software ekibine katılmak istiyorum',
     },
     contact: {
