@@ -102,7 +102,7 @@ const tr = {
       lead: 'Kurucumuz ve birlikte çalışan ekibimiz. Ekibe katılmak isterseniz bize yazın.',
       founder: {
         name: 'Kerem Üstüner',
-        role: 'Kurucu · Genel Koordinatör',
+        role: 'Kurucu · Genel Koordinatör · CEO',
         text: 'Ürün, yazılım ve tasarım',
       },
       roles: [
