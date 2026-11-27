@@ -44,7 +44,7 @@ jobs:
         run: |
           sleep 15
           URL=https://ustunersoftware.com.tr
-          for p in / /huma /defteria /gizlilik/huma /gizlilik/defteria /huma/hesap-silme /defteria/hesap-silme /og/huma.png /favicon.ico /indir/huma /indir/defteria; do
+          for p in / /huma /defteria /gizlilik/huma /gizlilik/defteria /huma/hesap-silme /defteria/hesap-silme /og/huma.png /ala /ala/gizlilik /favicon.ico /indir/huma /indir/defteria; do
             echo "$p $(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' $URL$p)"
           done
           cat src/data/releases.json
