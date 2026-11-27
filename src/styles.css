@@ -413,6 +413,7 @@ button { font: inherit; color: inherit; }
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 50px 90px rgba(0, 0, 0, 0.35);
   font-size: calc(var(--tw) * 0.0175);
 }
+.ala-shot { display: block; width: 100%; height: 100%; object-fit: cover; }
 .tablet-screen { height: 100%; border-radius: calc(var(--tw) * 0.022); overflow: hidden; background: #0b0908; color: #f1e7da; text-align: left; }
 .d-scr { height: 100%; display: flex; flex-direction: column; }
 .d-tool { display: flex; align-items: center; justify-content: space-between; gap: 1em; padding: 0.7em 1.1em; background: #15110f; border-bottom: 1px solid #2c241f; }

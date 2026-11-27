@@ -27,6 +27,7 @@ export default function Nav() {
   const links = [
     { to: '/huma', label: t.nav.huma },
     { to: '/defteria', label: t.nav.defteria },
+    { to: '/#ala', label: 'ALÂ' },
     { to: '/#vega', label: t.nav.vega },
     { to: '/#hakkimizda', label: t.nav.about },
     { to: '/#ekip', label: t.nav.team },

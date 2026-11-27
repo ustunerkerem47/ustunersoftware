@@ -20,6 +20,7 @@ export default function Footer() {
               <h4>{f.apps}</h4>
               <Link to="/huma">HÜMA</Link>
               <Link to="/defteria">Defteria</Link>
+              <a href="/ala/">ALÂ</a>
               <Link to="/#vega">VEGA</Link>
             </div>
             <div>
@@ -33,6 +34,7 @@ export default function Footer() {
               <h4>{f.legal}</h4>
               <Link to="/gizlilik/huma">{f.humaPrivacy}</Link>
               <Link to="/gizlilik/defteria">{f.defteriaPrivacy}</Link>
+              <a href="/ala/gizlilik/">{f.alaPrivacy}</a>
             </div>
           </div>
         </div>

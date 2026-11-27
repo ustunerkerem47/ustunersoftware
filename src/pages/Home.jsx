@@ -109,6 +109,34 @@ export default function Home() {
         </Rise>
       </section>
 
+      <section className="tile tile-black" id="ala">
+        <Reveal className="tile-head">
+          <small className="kind">{h.ala.kind}</small>
+          <h2 className="tile-title">ALÂ</h2>
+          <p className="tile-tag">{h.ala.tagline}</p>
+          <p className="tile-text">{h.ala.text}</p>
+
+          <div className="btns center">
+            <a className="btn primary" href="/ala/">
+              {h.ala.open}
+            </a>
+            <a className="btn ghost" href="/ala/gizlilik/">
+              {h.ala.privacy}
+            </a>
+          </div>
+
+          <Status kind="live">{h.ala.status}</Status>
+        </Reveal>
+
+        <Rise className="stage tablet-stage">
+          <a href="/ala/" aria-label="ALÂ">
+            <Tablet width={820}>
+              <img className="ala-shot" src="/ala/onizleme.webp" alt="ALÂ: elektrik alan deneyi" loading="lazy" width="1800" height="1193" />
+            </Tablet>
+          </a>
+        </Rise>
+      </section>
+
       <section className="duo" id="vega">
         <Reveal className="half half-vega">
           <small className="kind">{h.vega.kind}</small>
